@@ -109,7 +109,7 @@ export default function HomePage() {
             const count = CLUBS.filter((c) => c.category === cat.id).length;
             const Icon = cat.icon;
             return (
-              
+              <a
                 key={cat.id}
                 href={`/explore?category=${cat.id}`}
                 style={{
