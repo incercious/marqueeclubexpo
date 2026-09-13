@@ -1,23 +1,24 @@
+import {
+  FlaskConical, Palette, Trophy, BookOpen, HeartHandshake,
+  Globe2, Users, Briefcase, Sparkles,
+} from "lucide-react";
+
 // ============================================================
 // DATA FILE — the only place club and category info lives.
 // Every page and component reads from here. Nothing else in
 // the project has club info typed into it directly.
-//
-// This is placeholder/demo data. Later, this file gets replaced
-// by data pulled from a Google Sheet or database — the pages
-// themselves won't need to change.
 // ============================================================
 
 export const CATEGORIES = [
-  { id: "stem", name: "STEM", color: "#3B6FA0" },
-  { id: "arts", name: "Arts & Music", color: "#B24D8F" },
-  { id: "sports", name: "Sports", color: "#C6572A" },
-  { id: "academic", name: "Academic", color: "#4A7A5B" },
-  { id: "service", name: "Community Service", color: "#1F6F6F" },
-  { id: "culture", name: "Culture & Language", color: "#7A5CB0" },
-  { id: "leadership", name: "Leadership", color: "#B9791A" },
-  { id: "business", name: "Business", color: "#35505C" },
-  { id: "other", name: "Other", color: "#6B6B68" },
+  { id: "stem", name: "STEM", color: "#3B6FA0", icon: FlaskConical },
+  { id: "arts", name: "Arts & Music", color: "#B24D8F", icon: Palette },
+  { id: "sports", name: "Sports", color: "#C6572A", icon: Trophy },
+  { id: "academic", name: "Academic", color: "#4A7A5B", icon: BookOpen },
+  { id: "service", name: "Community Service", color: "#1F6F6F", icon: HeartHandshake },
+  { id: "culture", name: "Culture & Language", color: "#7A5CB0", icon: Globe2 },
+  { id: "leadership", name: "Leadership", color: "#B9791A", icon: Users },
+  { id: "business", name: "Business", color: "#35505C", icon: Briefcase },
+  { id: "other", name: "Other", color: "#6B6B68", icon: Sparkles },
 ];
 
 export const CLUBS = [
