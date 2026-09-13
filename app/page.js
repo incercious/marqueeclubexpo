@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { CLUBS, CATEGORIES } from "@/data/clubs";
 import { COLORS, fontDisplay, fontBody, fontMono } from "@/lib/theme";
 import { SCHOOL_SHORT_NAME } from "@/lib/schoolConfig";
-import { CATEGORY_ICONS } from "@/lib/categoryIcons";
 import ClubCard from "@/components/ClubCard";
 import TicketButton from "@/components/TicketButton";
 
@@ -110,7 +109,7 @@ export default function HomePage() {
             const count = CLUBS.filter((c) => c.category === cat.id).length;
             const Icon = cat.icon;
             return (
-              <a
+              
                 key={cat.id}
                 href={`/explore?category=${cat.id}`}
                 style={{
