@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { CLUBS, CATEGORIES } from "@/data/clubs";
 import { COLORS, fontDisplay, fontBody, fontMono } from "@/lib/theme";
 import { SCHOOL_SHORT_NAME } from "@/lib/schoolConfig";
+import { CATEGORY_ICONS } from "@/lib/categoryIcons";
 import ClubCard from "@/components/ClubCard";
 import TicketButton from "@/components/TicketButton";
 
@@ -107,6 +108,7 @@ export default function HomePage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14 }}>
           {CATEGORIES.map((cat) => {
             const count = CLUBS.filter((c) => c.category === cat.id).length;
+            const Icon = cat.icon;
             return (
               <a
                 key={cat.id}
@@ -128,8 +130,13 @@ export default function HomePage() {
                     height: 34,
                     borderRadius: 8,
                     background: cat.color + "1A",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
-                />
+                >
+                  <Icon size={18} color={cat.color} strokeWidth={2} />
+                </div>
                 <div>
                   <div style={{ fontFamily: fontBody, fontWeight: 600, fontSize: 14.5, color: COLORS.ink }}>
                     {cat.name}
