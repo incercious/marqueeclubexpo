@@ -432,8 +432,10 @@ export const CLUBS = [
     category: "stem",
     shortDescription: "For students curious about science, exploration, and discovery.",
     longDescription: "Young Scientist inspires and supports students interested in science, offering hands-on workshops and opportunities to explore scientific ideas together.",
+    meetingTime: "2:45",
+    location: "Room 213",
     sponsor: "Ms. Mendoza / Mr. De Francisco",
-    social: {},
+    social: { "instagram": "https://www.instagram.com/young.scientists.ddcus" },
     featured: false,
   },
 ];
