@@ -65,7 +65,7 @@ export default function ClubPage({ params }) {
         {club.name}
       </h1>
 
-      <VideoPlaceholder />
+      <VideoPlaceholder videoUrl={club.videoUrl} />
 
       <p style={{ fontFamily: fontBody, fontSize: 16, lineHeight: 1.7, color: COLORS.ink, margin: "26px 0" }}>
         {club.longDescription}
