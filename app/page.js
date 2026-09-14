@@ -21,7 +21,8 @@ export default function HomePage() {
   return (
     <div>
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "64px 20px 40px" }}>
-        <div style={{ maxWidth: 640 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 32, alignItems: "center" }}>
+        <div style={{ maxWidth: 640, flex: "1 1 420px" }}>
           <span
             style={{
               fontFamily: fontMono,
@@ -84,6 +85,19 @@ export default function HomePage() {
               Search
             </TicketButton>
           </form>
+        </div>
+
+        <img
+          src="/images/ddcus-dolphin.png"
+          alt="DDCUS Dolphins mascot"
+          style={{
+            flex: "1 1 260px",
+            maxWidth: 340,
+            width: "100%",
+            height: "auto",
+            marginInline: "auto",
+          }}
+        />
         </div>
       </section>
 

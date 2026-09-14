@@ -18,6 +18,8 @@ export default function AdminPage() {
   const [error, setError] = useState("");
   const [primary, setPrimary] = useState(COLORS.primary);
   const [secondary, setSecondary] = useState(COLORS.secondary);
+  const [bg, setBg] = useState(COLORS.bg);
+  const [ink, setInk] = useState(COLORS.ink);
   const [copied, setCopied] = useState(false);
 
   const handleLogin = (e) => {
@@ -36,9 +38,9 @@ export default function AdminPage() {
 // ============================================================
 
 export const COLORS = {
-  bg: "${COLORS.bg}",
+  bg: "${bg}",
   card: "${COLORS.card}",
-  ink: "${COLORS.ink}",
+  ink: "${ink}",
   inkSoft: "${COLORS.inkSoft}",
   line: "${COLORS.line}",
   primary: "${primary}",
@@ -140,45 +142,34 @@ export const fontMono = "'IBM Plex Mono', ui-monospace, monospace";
         on GitHub, same as any other update.
       </p>
 
-      <div style={{ display: "flex", gap: 24, marginBottom: 24 }}>
-        <label
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 6,
-            fontFamily: fontBody,
-            fontSize: 13,
-            fontWeight: 600,
-            color: COLORS.ink,
-          }}
-        >
-          Primary
-          <input
-            type="color"
-            value={primary}
-            onChange={(e) => setPrimary(e.target.value)}
-            style={{ width: 60, height: 36, border: "none", background: "none", cursor: "pointer" }}
-          />
-        </label>
-        <label
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 6,
-            fontFamily: fontBody,
-            fontSize: 13,
-            fontWeight: 600,
-            color: COLORS.ink,
-          }}
-        >
-          Secondary
-          <input
-            type="color"
-            value={secondary}
-            onChange={(e) => setSecondary(e.target.value)}
-            style={{ width: 60, height: 36, border: "none", background: "none", cursor: "pointer" }}
-          />
-        </label>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 24, marginBottom: 24 }}>
+        {[
+          { label: "Primary", value: primary, set: setPrimary },
+          { label: "Secondary", value: secondary, set: setSecondary },
+          { label: "Background", value: bg, set: setBg },
+          { label: "Text", value: ink, set: setInk },
+        ].map((c) => (
+          <label
+            key={c.label}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 6,
+              fontFamily: fontBody,
+              fontSize: 13,
+              fontWeight: 600,
+              color: COLORS.ink,
+            }}
+          >
+            {c.label}
+            <input
+              type="color"
+              value={c.value}
+              onChange={(e) => c.set(e.target.value)}
+              style={{ width: 60, height: 36, border: "none", background: "none", cursor: "pointer" }}
+            />
+          </label>
+        ))}
       </div>
 
       <p style={{ fontFamily: fontMono, fontSize: 12, color: COLORS.inkSoft, margin: "0 0 8px" }}>
@@ -186,41 +177,43 @@ export const fontMono = "'IBM Plex Mono', ui-monospace, monospace";
       </p>
       <div
         style={{
-          display: "flex",
-          gap: 10,
-          alignItems: "center",
           marginBottom: 32,
-          padding: 16,
-          background: COLORS.card,
+          padding: 20,
+          background: bg,
           border: `1px solid ${COLORS.line}`,
           borderRadius: 10,
         }}
       >
-        <span
-          style={{
-            fontFamily: fontBody,
-            fontWeight: 600,
-            fontSize: 13,
-            padding: "8px 16px",
-            borderRadius: 8,
-            background: primary,
-            color: "#fff",
-          }}
-        >
-          Join club
-        </span>
-        <span
-          style={{
-            fontFamily: fontMono,
-            fontSize: 12,
-            padding: "5px 12px",
-            borderRadius: 999,
-            background: secondary + "26",
-            color: secondary,
-          }}
-        >
-          Category badge
-        </span>
+        <p style={{ fontFamily: fontDisplay, fontStyle: "italic", fontWeight: 600, fontSize: 22, color: ink, margin: "0 0 14px" }}>
+          Find your club.
+        </p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
+          <span
+            style={{
+              fontFamily: fontBody,
+              fontWeight: 600,
+              fontSize: 13,
+              padding: "8px 16px",
+              borderRadius: 8,
+              background: primary,
+              color: "#fff",
+            }}
+          >
+            Join club
+          </span>
+          <span
+            style={{
+              fontFamily: fontMono,
+              fontSize: 12,
+              padding: "5px 12px",
+              borderRadius: 999,
+              background: secondary + "26",
+              color: secondary,
+            }}
+          >
+            Category badge
+          </span>
+        </div>
       </div>
 
       <button
