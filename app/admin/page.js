@@ -24,6 +24,8 @@ export default function AdminPage() {
   const [headerTag, setHeaderTag] = useState(SCHOOL_SHORT_NAME);
   const [copied, setCopied] = useState(false);
   const [copiedSchool, setCopiedSchool] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saveMessage, setSaveMessage] = useState(null); // { type: "success" | "error", text }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,6 +34,36 @@ export default function AdminPage() {
       setError("");
     } else {
       setError("Wrong password.");
+    }
+  };
+
+  const saveToGitHub = async (files) => {
+    setSaving(true);
+    setSaveMessage(null);
+    try {
+      const res = await fetch("/api/admin/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password, files }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setSaveMessage({ type: "error", text: data.error || "Something went wrong." });
+      } else {
+        const failed = Object.entries(data.results || {}).filter(([, v]) => v.startsWith("error"));
+        if (failed.length) {
+          setSaveMessage({ type: "error", text: failed.map(([p, v]) => `${p}: ${v}`).join(" | ") });
+        } else {
+          setSaveMessage({
+            type: "success",
+            text: "Saved! Vercel will redeploy automatically -- check back in about a minute.",
+          });
+        }
+      }
+    } catch (err) {
+      setSaveMessage({ type: "error", text: "Couldn't reach the server. Try the Copy button instead." });
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -245,22 +277,54 @@ export const CONTACT_EMAIL = "${CONTACT_EMAIL}";
         </div>
       </div>
 
-      <button
-        onClick={handleCopy}
-        style={{
-          fontFamily: fontBody,
-          fontWeight: 600,
-          fontSize: 14,
-          background: COLORS.ink,
-          color: COLORS.bg,
-          border: "none",
-          borderRadius: 8,
-          padding: "10px 18px",
-          cursor: "pointer",
-        }}
-      >
-        {copied ? "Copied ✓" : "Copy updated theme.js"}
-      </button>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
+        <button
+          onClick={() => saveToGitHub({ "lib/theme.js": generatedTheme })}
+          disabled={saving}
+          style={{
+            fontFamily: fontBody,
+            fontWeight: 600,
+            fontSize: 14,
+            background: primary,
+            color: "#fff",
+            border: "none",
+            borderRadius: 8,
+            padding: "10px 18px",
+            cursor: saving ? "default" : "pointer",
+            opacity: saving ? 0.6 : 1,
+          }}
+        >
+          {saving ? "Saving…" : "Save & deploy"}
+        </button>
+        <button
+          onClick={handleCopy}
+          style={{
+            fontFamily: fontBody,
+            fontWeight: 600,
+            fontSize: 14,
+            background: "transparent",
+            color: COLORS.ink,
+            border: `1px solid ${COLORS.line}`,
+            borderRadius: 8,
+            padding: "10px 18px",
+            cursor: "pointer",
+          }}
+        >
+          {copied ? "Copied ✓" : "Copy updated theme.js instead"}
+        </button>
+      </div>
+      {saveMessage && (
+        <p
+          style={{
+            fontFamily: fontBody,
+            fontSize: 13,
+            color: saveMessage.type === "error" ? "#A3372B" : "#2E6B3E",
+            margin: "10px 0 0",
+          }}
+        >
+          {saveMessage.text}
+        </p>
+      )}
 
       <div style={{ marginTop: 48, paddingTop: 32, borderTop: `1px solid ${COLORS.line}` }}>
         <h2
@@ -343,22 +407,54 @@ export const CONTACT_EMAIL = "${CONTACT_EMAIL}";
           </span>
         </div>
 
-        <button
-          onClick={handleCopySchool}
-          style={{
-            fontFamily: fontBody,
-            fontWeight: 600,
-            fontSize: 14,
-            background: COLORS.ink,
-            color: COLORS.bg,
-            border: "none",
-            borderRadius: 8,
-            padding: "10px 18px",
-            cursor: "pointer",
-          }}
-        >
-          {copiedSchool ? "Copied ✓" : "Copy updated schoolConfig.js"}
-        </button>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
+          <button
+            onClick={() => saveToGitHub({ "lib/schoolConfig.js": generatedSchoolConfig })}
+            disabled={saving}
+            style={{
+              fontFamily: fontBody,
+              fontWeight: 600,
+              fontSize: 14,
+              background: primary,
+              color: "#fff",
+              border: "none",
+              borderRadius: 8,
+              padding: "10px 18px",
+              cursor: saving ? "default" : "pointer",
+              opacity: saving ? 0.6 : 1,
+            }}
+          >
+            {saving ? "Saving…" : "Save & deploy"}
+          </button>
+          <button
+            onClick={handleCopySchool}
+            style={{
+              fontFamily: fontBody,
+              fontWeight: 600,
+              fontSize: 14,
+              background: "transparent",
+              color: COLORS.ink,
+              border: `1px solid ${COLORS.line}`,
+              borderRadius: 8,
+              padding: "10px 18px",
+              cursor: "pointer",
+            }}
+          >
+            {copiedSchool ? "Copied ✓" : "Copy updated schoolConfig.js instead"}
+          </button>
+        </div>
+        {saveMessage && (
+          <p
+            style={{
+              fontFamily: fontBody,
+              fontSize: 13,
+              color: saveMessage.type === "error" ? "#A3372B" : "#2E6B3E",
+              margin: "10px 0 0",
+            }}
+          >
+            {saveMessage.text}
+          </p>
+        )}
       </div>
     </div>
   );
