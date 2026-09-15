@@ -512,6 +512,21 @@ export const CLUBS = [
     social: { instagram: "https://instagram.com/muaythaiddcus" },
     featured: false,
   },
+  {
+    slug: "politics-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    name: "Politics Club",
+    category: "leadership",
+    shortDescription: "A student-led space to discuss the political state of the country and beyond.",
+    longDescription: "Politics Club is built by students who take interest in understanding the current political climate, questioning their own beliefs, and sharing their opinions -- and thinking about what we can do to help our community.",
+    meetingDays: "Tuesdays",
+    meetingTime: "2:10 PM",
+    location: "Room 304",
+    sponsor: "Mr. Stone",
+    joinLink: "https://chat.whatsapp.com/IbIEXRwB79p384A3rsC8vi",
+    social: { instagram: "https://www.instagram.com/makingpoliticsfunagain" },
+    featured: false,
+  },
 ];
 
 export function getCategory(id) {
