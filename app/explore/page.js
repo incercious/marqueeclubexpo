@@ -10,18 +10,21 @@ function ExploreContent() {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [activeCategory, setActiveCategory] = useState(searchParams.get("category") || "all");
+  const [levelFilter, setLevelFilter] = useState("all");
   const [sortBy, setSortBy] = useState("name");
 
   const filtered = useMemo(() => {
     let list = CLUBS.filter((c) => {
       const matchesQuery = (c.name + c.shortDescription).toLowerCase().includes(query.toLowerCase());
       const matchesCategory = activeCategory === "all" || c.category === activeCategory;
-      return matchesQuery && matchesCategory;
+      const matchesLevel =
+        levelFilter === "all" || c.level === "both" || c.level === levelFilter;
+      return matchesQuery && matchesCategory && matchesLevel;
     });
     if (sortBy === "name") list = [...list].sort((a, b) => a.name.localeCompare(b.name));
     if (sortBy === "category") list = [...list].sort((a, b) => a.category.localeCompare(b.category));
     return list;
-  }, [query, activeCategory, sortBy]);
+  }, [query, activeCategory, levelFilter, sortBy]);
 
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 20px 80px" }}>
@@ -29,7 +32,7 @@ function ExploreContent() {
         Explore clubs
       </h1>
       <p style={{ fontFamily: fontBody, fontSize: 15, color: COLORS.inkSoft, margin: "0 0 26px" }}>
-        {CLUBS.length} clubs and counting — demo data shown below.
+        {CLUBS.length} clubs and counting.
       </p>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center", marginBottom: 18 }}>
@@ -60,6 +63,23 @@ function ExploreContent() {
             }}
           />
         </div>
+        <select
+          value={levelFilter}
+          onChange={(e) => setLevelFilter(e.target.value)}
+          style={{
+            fontFamily: fontBody,
+            fontSize: 14,
+            padding: "9px 12px",
+            borderRadius: 10,
+            border: `1px solid ${COLORS.line}`,
+            background: COLORS.card,
+            color: COLORS.ink,
+          }}
+        >
+          <option value="all">All grade levels</option>
+          <option value="ms">Middle school</option>
+          <option value="hs">High school</option>
+        </select>
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}

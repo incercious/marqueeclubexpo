@@ -24,61 +24,76 @@ export const CATEGORIES = [
 export const CLUBS = [
   {
     slug: "2tor-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "2Tor Club",
     category: "academic",
     shortDescription: "Peer tutoring club where students who understand a subject teach students who don't.",
     longDescription: "2Tor Club pairs students who understand certain course subjects with those who need extra help, fostering peer learning and stronger academic skills through collaboration.",
+    meetingDays: "Tue / Thu",
+    meetingTime: "2:35 PM",
+    location: "Room 201A",
+    joinLink: "https://docs.google.com/forms/d/e/1FAIpQLSdgdf8msnRd5yvfFIe69SYk1DokO_iiXfju6kJeofgLnyCjoA/viewform?usp=send_form",
     sponsor: "Ms. Patricia Moreno",
     email: "pmoreno@dadeschools.net",
-    social: {},
+    social: { instagram: "https://instagram.com/2torddcus" },
     featured: false,
   },
   {
     slug: "art-business-dolphin-exclusives",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Art Business – Dolphin Exclusives",
     category: "business",
     shortDescription: "Bridges art and entrepreneurship, teaching students to market and sell their own artwork.",
     longDescription: "Dolphin Exclusives helps students bridge the gap between creativity and entrepreneurship, exploring the business side of the art world — marketing, networking, and selling artwork — while fostering artistic talent.",
     meetingDays: "Flexible",
     meetingTime: "See Ms. Silver",
+    joinLink: "https://docs.google.com/forms/d/e/1FAIpQLSfQ2A3SZong2_79Y9lE8i14AX-yKYduKxt0H2gqbO025r11UA/viewform",
     sponsor: "Ms. Silver",
     email: "v.silver@dadeschools.net",
-    social: { "instagram": "https://instagram.com/ddcus_dolphinexclusives", "website": "https://dolphinexclusives.square.site" },
+    social: { instagram: "https://instagram.com/ddcus_dolphinexclusives", website: "https://dolphinexclusives.square.site" },
     featured: false,
   },
   {
     slug: "athletics-training-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Athletics Training Club",
     category: "sports",
     shortDescription: "Hands-on introduction to sports medicine, injury prevention, and athletic performance.",
     longDescription: "The Athletics Training Club gives students hands-on experience in sports medicine — injury prevention, rehabilitation, and exercise science — while building teamwork and leadership around athletic performance.",
     sponsor: "Mr. Saez / Mr. Ferrer",
-    social: { "instagram": "https://instagram.com/ddcussportsmedicine" },
+    social: { instagram: "https://instagram.com/ddcussportsmedicine" },
     featured: false,
   },
   {
     slug: "builders-club",
+    level: "ms", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Builders Club",
     category: "service",
     shortDescription: "Middle school leadership and community service club.",
     longDescription: "Builders Club develops leadership skills and encourages community service among middle school students, inspiring members to take initiative, build character, and make a positive impact through volunteering.",
     sponsor: "Ms. Villamizar",
-    social: {},
+    social: { instagram: "https://instagram.com/ddcuskeyclub" },
     featured: false,
   },
   {
     slug: "chess-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Chess Club",
     category: "academic",
     shortDescription: "Learn, practice, and compete in chess in a supportive, team-oriented environment.",
     longDescription: "Chess Club promotes strategic thinking and problem-solving through the game of chess, giving students a space to learn, practice, and compete while building teamwork and sportsmanship.",
+    meetingDays: "Thu / Fri",
+    meetingTime: "2:10 PM",
+    location: "Room 314",
+    joinLink: "https://chat.whatsapp.com/EB3fGrlhC8A4Vd2YLj1QYy?s=qs&p=i&mlu=4&ilr=4",
     sponsor: "Mr. Hurtado / Mr. Gonzalez",
     email: "e.hurtado@dadeschools.net",
-    social: {},
+    social: { instagram: "https://instagram.com/ddcuschessclub" },
     featured: false,
   },
   {
     slug: "coin-collecting-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Coin Collecting Club",
     category: "other",
     shortDescription: "For students curious about the history and hobby of coin collecting.",
@@ -89,6 +104,7 @@ export const CLUBS = [
   },
   {
     slug: "college-advisory-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "College Advisory Club",
     category: "academic",
     shortDescription: "Guidance and mentorship for navigating the college application process.",
@@ -100,27 +116,32 @@ export const CLUBS = [
   },
   {
     slug: "deca",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "DECA",
     category: "business",
     shortDescription: "Prepares future leaders in marketing, finance, hospitality, and management.",
     longDescription: "DECA prepares emerging leaders and entrepreneurs in marketing, finance, hospitality, and management, offering personal and professional growth through competitions, workshops, and networking.",
     sponsor: "Ms. Silver / Ms. Ahkras-Abraham",
     email: "v.silver@dadeschools.net",
-    social: {},
+    social: { instagram: "https://instagram.com/ddcusdeca" },
     featured: false,
   },
   {
     slug: "drama-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Drama Club",
     category: "arts",
     shortDescription: "Explore acting, directing, writing, and stagecraft through theater production.",
     longDescription: "Drama Club gives students a platform to explore and showcase their talents in acting, directing, writing, and stagecraft, working together on all aspects of theater production from scriptwriting to performance.",
+    meetingDays: "Tue / Thu",
+    meetingTime: "2:35-4:00 PM",
     sponsor: "Ms. Revivo",
     social: {},
     featured: false,
   },
   {
     slug: "dnd-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "D&D Club",
     category: "other",
     shortDescription: "Weekly Dungeons & Dragons sessions — no experience necessary.",
@@ -134,6 +155,7 @@ export const CLUBS = [
   },
   {
     slug: "fashion-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Fashion Club",
     category: "arts",
     shortDescription: "Explore fashion design, styling, and industry trends through creative projects.",
@@ -144,16 +166,18 @@ export const CLUBS = [
   },
   {
     slug: "fbla",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Future Business Leaders of America (FBLA)",
     category: "business",
     shortDescription: "Develops future business leaders through competitions and networking.",
     longDescription: "FBLA inspires and prepares students to become community-minded business leaders, developing leadership, communication, and business skills through academic competitions and professional networking.",
     sponsor: "Lilybell Fernandez / Ms. Jadon",
-    social: { "instagram": "https://instagram.com/ddcusfbla" },
+    social: { instagram: "https://instagram.com/ddcusfbla" },
     featured: false,
   },
   {
     slug: "fea",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Future Educators of America (FEA)",
     category: "academic",
     shortDescription: "For students interested in pursuing careers in education.",
@@ -165,6 +189,7 @@ export const CLUBS = [
   },
   {
     slug: "future-engineers-lego-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Future Engineers of America (Lego Club)",
     category: "stem",
     shortDescription: "Hands-on engineering exploration for students interested in engineering careers.",
@@ -175,6 +200,7 @@ export const CLUBS = [
   },
   {
     slug: "finance-literacy-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Finance Literacy Club",
     category: "business",
     shortDescription: "Learn budgeting, saving, investing, and personal finance skills.",
@@ -186,6 +212,7 @@ export const CLUBS = [
   },
   {
     slug: "hand-lettering-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Hand Lettering Club",
     category: "arts",
     shortDescription: "A relaxed space for lettering, embroidery, crochet, and other handmade crafts.",
@@ -196,17 +223,21 @@ export const CLUBS = [
   },
   {
     slug: "hosa",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "HOSA – Future Health Professionals",
     category: "stem",
     shortDescription: "For students exploring careers in healthcare through competitions and leadership.",
     longDescription: "HOSA empowers students to become leaders in the global health community, developing technical, leadership, and teamwork skills in health-related fields to prepare for future healthcare careers.",
+    meetingDays: "Mondays (Monthly)",
+    joinLink: "https://chat.whatsapp.com/EmE5TpviC6ZDjivvLuvzr3?mode=gi_t",
     sponsor: "Ms. Tortosa",
     email: "atortosa@dadeschools.net",
-    social: { "instagram": "https://instagram.com/ddcus.hosa" },
+    social: { instagram: "https://instagram.com/ddcus.hosa" },
     featured: true,
   },
   {
     slug: "hispanic-honor-society",
+    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Hispanic Honor Society (HHS)",
     category: "culture",
     shortDescription: "Honor society recognizing academic excellence in Spanish, Portuguese, and Hispanic culture.",
@@ -218,6 +249,7 @@ export const CLUBS = [
   },
   {
     slug: "ib-honor-society",
+    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "International Baccalaureate Honor Society (IBHS)",
     category: "academic",
     shortDescription: "Recognizes academic excellence among IB Diploma students.",
@@ -228,37 +260,45 @@ export const CLUBS = [
   },
   {
     slug: "key-club",
+    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Key Club",
     category: "service",
     shortDescription: "Student-led community service and leadership club for high schoolers.",
     longDescription: "Key Club develops leadership skills and encourages community service among high school students, inspiring members to take initiative, build character, and make a positive impact through volunteerism.",
     sponsor: "Ms. Heliana Vasquez",
     email: "hvasquez@dadeschools.net",
-    social: { "instagram": "https://instagram.com/ddcuskeyclub" },
+    social: { instagram: "https://instagram.com/ddcuskeyclub" },
     featured: true,
   },
   {
     slug: "model-un",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Model UN",
     category: "leadership",
     shortDescription: "Debate global issues and diplomacy, building the next generation of leaders.",
     longDescription: "Model UN engages students with global issues and how they could be diplomatically solved, developing problem-solving and research skills through simulated international diplomacy.",
+    joinLink: "https://chat.whatsapp.com/GaqNvQLMZKWFVcgyNWUGaq?s=qs&p=i&mlu=4&ilr=4",
     sponsor: "Mr. Stone / Ms. Chase / Mr. Morales",
-    social: {},
+    social: { instagram: "https://instagram.com/ddcusmodelun" },
     featured: false,
   },
   {
     slug: "mu-alpha-theta",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Mu Alpha Theta Honor Society",
     category: "stem",
     shortDescription: "Math honor society for students who want to sharpen their skills and compete.",
     longDescription: "Mu Alpha Theta Honor Society builds a strong interest in math, enriching students' skills and giving them the opportunity to display their abilities through organized competitions.",
+    meetingDays: "Fridays, Bi-weekly",
+    meetingTime: "2:15-2:45",
+    location: "Room 340",
     sponsor: "Mr. Mesa / Mr. Dongo",
     social: {},
     featured: false,
   },
   {
     slug: "national-english-honor-society",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "National English Honor Society (NEHS)",
     category: "academic",
     shortDescription: "Honor society recognizing excellence in English and language arts.",
@@ -266,6 +306,7 @@ export const CLUBS = [
     meetingDays: "Monthly",
     meetingTime: "2:15 PM",
     location: "Room 332",
+    joinLink: "https://docs.google.com/forms/d/e/1FAIpQLSf3RWBeHgzAJERJuHMnooU4k0ppU1IGuYGebBk3gVDwvs12aA/viewform?usp=send_form",
     sponsor: "Ms. Jaynie Hernandez / Mr. Terga",
     email: "hernandez.j@dadeschools.net",
     social: {},
@@ -273,27 +314,33 @@ export const CLUBS = [
   },
   {
     slug: "nhs-njhs",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "National Honor Society (NHS) & National Junior Honor Society (NJHS)",
     category: "academic",
     shortDescription: "Recognizes and promotes academic excellence for middle and high schoolers.",
     longDescription: "NHS (10th–12th grade) and NJHS (6th–9th grade) recognize students' academic excellence and give them the chance to participate in leadership-based events.",
     sponsor: "Ms. Priscila Vega / Ms. Cabello / Ms. Gillespie",
     email: "priscillavega@dadeschools.net",
-    social: { "instagram": "https://instagram.com/the_nationalddcus" },
+    social: { instagram: "https://instagram.com/the_nationalddcus" },
     featured: true,
   },
   {
     slug: "national-science-honor-society",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "National Science Honor Society (NSHS)",
     category: "stem",
     shortDescription: "Honor society recognizing excellence and achievement in the sciences.",
     longDescription: "NSHS recognizes and promotes excellent achievement in the sciences, giving students the chance to participate in activities that enhance and showcase their skills.",
+    meetingDays: "Thursdays",
+    meetingTime: "2:40 PM",
+    location: "Room 321",
     sponsor: "Ms. Jadon",
     social: {},
     featured: false,
   },
   {
     slug: "its-the-echo-news-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "It's the Echo (News Club)",
     category: "other",
     shortDescription: "Student-run news team producing school video reports and journalism.",
@@ -308,6 +355,7 @@ export const CLUBS = [
   },
   {
     slug: "portuguese-language-exchange",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Portuguese Language Exchange",
     category: "culture",
     shortDescription: "Explore Portuguese language and culture through events and practice.",
@@ -318,6 +366,7 @@ export const CLUBS = [
   },
   {
     slug: "production-club-stage-and-design",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Production Club (Stage and Design)",
     category: "arts",
     shortDescription: "Design and build stage sets and technical production elements for school events.",
@@ -329,6 +378,7 @@ export const CLUBS = [
   },
   {
     slug: "robotics-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Robotics Club (RoboFins)",
     category: "stem",
     shortDescription: "Award-winning VEX robotics team — design, build, code, and compete.",
@@ -338,11 +388,12 @@ export const CLUBS = [
     location: "Room 404",
     sponsor: "Mr. Javier Bru / Mr. Godia / Mr. Parra / Mr. Gallego",
     email: "jbru@dadeschools.net",
-    social: { "instagram": "https://instagram.com/ddcusrobotics" },
+    social: { instagram: "https://instagram.com/ddcusrobotics" },
     featured: true,
   },
   {
     slug: "sociedad-hispanica-de-amistad",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Sociedad Hispánica de Amistad (SHA)",
     category: "culture",
     shortDescription: "Explore Hispanic culture and practice Spanish in a fun, engaging setting.",
@@ -353,6 +404,7 @@ export const CLUBS = [
   },
   {
     slug: "student-ambassadors",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Student Ambassadors",
     category: "leadership",
     shortDescription: "Represents the school at events and builds student leadership skills.",
@@ -364,6 +416,7 @@ export const CLUBS = [
   },
   {
     slug: "student-government-association",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Student Government Association (SGA)",
     category: "leadership",
     shortDescription: "Represents the student body's voice to school faculty and leadership.",
@@ -375,6 +428,7 @@ export const CLUBS = [
   },
   {
     slug: "title-wave-book-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Title Wave (Book Club)",
     category: "academic",
     shortDescription: "Discover new books and discuss them with fellow readers.",
@@ -385,6 +439,7 @@ export const CLUBS = [
   },
   {
     slug: "tri-m-honor-society",
+    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Tri-M Music Honor Society",
     category: "arts",
     shortDescription: "Honor society recognizing excellence in music for high schoolers.",
@@ -395,26 +450,29 @@ export const CLUBS = [
   },
   {
     slug: "visual-arts-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Visual Arts Club",
     category: "arts",
     shortDescription: "Explore different art forms and techniques in a creative, expressive space.",
     longDescription: "Visual Arts Club gives students a space to explore different art forms, techniques, and media, encouraging personal expression and an appreciation of artistic traditions past and present.",
     sponsor: "Mr. Perdomo",
-    social: { "instagram": "https://instagram.com/visualartsclubddcus" },
+    social: { instagram: "https://instagram.com/visualartsclubddcus" },
     featured: false,
   },
   {
     slug: "women-of-tomorrow",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Women of Tomorrow",
     category: "leadership",
     shortDescription: "Mentorship and leadership program empowering young women.",
     longDescription: "Women of Tomorrow empowers young female students through mentorship and leadership skills, giving them opportunities to get involved and contribute to a stronger future.",
     sponsor: "Ms. Romero",
-    social: {},
+    social: { instagram: "https://www.instagram.com/womenoftomorrow.ddcus" },
     featured: false,
   },
   {
     slug: "wellness-yoga-club",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Wellness Club / Yoga Club",
     category: "other",
     shortDescription: "Mindfulness, breathing, and relaxation practices for stress relief.",
@@ -428,6 +486,7 @@ export const CLUBS = [
   },
   {
     slug: "young-scientist",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
     name: "Young Scientist",
     category: "stem",
     shortDescription: "For students curious about science, exploration, and discovery.",
@@ -435,7 +494,22 @@ export const CLUBS = [
     meetingTime: "2:45",
     location: "Room 213",
     sponsor: "Ms. Mendoza / Mr. De Francisco",
-    social: { "instagram": "https://www.instagram.com/young.scientists.ddcus" },
+    social: { instagram: "https://www.instagram.com/young.scientists.ddcus" },
+    featured: false,
+  },
+  {
+    slug: "muay-thai",
+    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    name: "Muay Thai",
+    category: "sports",
+    shortDescription: "Learn the fundamentals of Muay Thai in a beginner-friendly setting.",
+    longDescription: "Muay Thai introduces students to the fundamentals of the striking martial art, building fitness, discipline, and self-confidence in a supportive, beginner-friendly environment.",
+    meetingDays: "Mon / Wed",
+    location: "Room 104 (Yoga Room)",
+    sponsor: "Mr. Hurtado",
+    email: "e.hurtado@dadeschools.net",
+    joinLink: "https://docs.google.com/forms/d/e/1FAIpQLSekfuAnGRWSwWFJuswNxFCKRvO9O1tulgOw3GlQCUg9Pt_7XQ/viewform?usp=send_form",
+    social: { instagram: "https://instagram.com/muaythaiddcus" },
     featured: false,
   },
 ];

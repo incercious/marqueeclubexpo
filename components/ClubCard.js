@@ -19,7 +19,23 @@ export default function ClubCard({ club }) {
     >
       <div style={{ height: 4, background: cat.color }} />
       <div style={{ padding: "18px 18px 0" }}>
-        <CategoryBadge categoryId={club.category} />
+        <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+          <CategoryBadge categoryId={club.category} />
+          {club.level !== "both" && (
+            <span
+              style={{
+                fontFamily: fontMono,
+                fontSize: 11,
+                color: COLORS.inkSoft,
+                border: `1px solid ${COLORS.line}`,
+                borderRadius: 999,
+                padding: "2px 9px",
+              }}
+            >
+              {club.level === "ms" ? "Middle school" : "High school"}
+            </span>
+          )}
+        </div>
         <h3
           style={{
             fontFamily: fontDisplay,
