@@ -10,7 +10,7 @@ import TicketButton from "./TicketButton";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/explore", label: "Explore clubs" },
+  { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
 ];
 

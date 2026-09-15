@@ -1,5 +1,5 @@
-import { COLORS, fontDisplay, fontBody, fontMono } from "@/lib/theme";
-import { SCHOOL_NAME, CONTACT_INSTAGRAM, CONTACT_EMAIL } from "@/lib/schoolConfig";
+import { COLORS, fontDisplay, fontBody } from "@/lib/theme";
+import { SCHOOL_NAME } from "@/lib/schoolConfig";
 import TicketButton from "@/components/TicketButton";
 
 export default function AboutPage() {
@@ -31,12 +31,6 @@ export default function AboutPage() {
       <TicketButton primary href="/explore">
         Explore all clubs
       </TicketButton>
-
-      <div style={{ marginTop: 40, paddingTop: 24, borderTop: `1px solid ${COLORS.line}` }}>
-        <p style={{ fontFamily: fontMono, fontSize: 12.5, color: COLORS.inkSoft, margin: 0 }}>
-          Questions or want your club added? {CONTACT_INSTAGRAM} · {CONTACT_EMAIL}
-        </p>
-      </div>
     </div>
   );
 }

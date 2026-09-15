@@ -522,7 +522,6 @@ export const CLUBS = [
     meetingDays: "Tuesdays",
     meetingTime: "2:10 PM",
     location: "Room 304",
-    sponsor: "Mr. Stone",
     joinLink: "https://chat.whatsapp.com/IbIEXRwB79p384A3rsC8vi",
     social: { instagram: "https://www.instagram.com/makingpoliticsfunagain" },
     featured: false,
