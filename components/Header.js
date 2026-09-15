@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { COLORS, fontBody } from "@/lib/theme";
+import { SCHOOL_SHORT_NAME } from "@/lib/schoolConfig";
 import Logo from "./Logo";
 import TicketButton from "./TicketButton";
 
@@ -38,7 +39,19 @@ export default function Header() {
           justifyContent: "space-between",
         }}
       >
-        <Logo />
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <Logo />
+          <span
+            style={{
+              fontFamily: fontBody,
+              fontSize: 14,
+              fontWeight: 500,
+              color: COLORS.inkSoft,
+            }}
+          >
+            • {SCHOOL_SHORT_NAME}
+          </span>
+        </div>
         <nav className="marquee-desktop-nav" style={{ display: "flex", alignItems: "center", gap: 26 }}>
           {LINKS.map((l) => (
             <Link

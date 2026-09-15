@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { COLORS, fontDisplay, fontBody, fontMono } from "@/lib/theme";
 import { ADMIN_PASSWORD } from "@/lib/adminConfig";
+import { SCHOOL_NAME, SCHOOL_SHORT_NAME, CONTACT_INSTAGRAM, CONTACT_EMAIL } from "@/lib/schoolConfig";
 
 // The simplest possible admin panel: a password box, two color pickers,
 // a live preview, and a button that generates the updated lib/theme.js
@@ -20,7 +21,9 @@ export default function AdminPage() {
   const [secondary, setSecondary] = useState(COLORS.secondary);
   const [bg, setBg] = useState(COLORS.bg);
   const [ink, setInk] = useState(COLORS.ink);
+  const [headerTag, setHeaderTag] = useState(SCHOOL_SHORT_NAME);
   const [copied, setCopied] = useState(false);
+  const [copiedSchool, setCopiedSchool] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -60,6 +63,32 @@ export const fontMono = "'IBM Plex Mono', ui-monospace, monospace";
       setTimeout(() => setCopied(false), 2500);
     } catch {
       setCopied(false);
+    }
+  };
+
+  const generatedSchoolConfig = `// ============================================================
+// The ONE file to edit when setting Marquee up for a school.
+// Everything school-specific (name, short name) lives here so
+// reusing this project for a different school later is just
+// changing the two lines below -- nothing else in the codebase
+// needs to know which school it's running for.
+// ============================================================
+
+export const SCHOOL_NAME = "${SCHOOL_NAME}";
+export const SCHOOL_SHORT_NAME = "${headerTag}";
+
+// Fill these in once you have them -- shown at the bottom of the About page.
+export const CONTACT_INSTAGRAM = "${CONTACT_INSTAGRAM}";
+export const CONTACT_EMAIL = "${CONTACT_EMAIL}";
+`;
+
+  const handleCopySchool = async () => {
+    try {
+      await navigator.clipboard.writeText(generatedSchoolConfig);
+      setCopiedSchool(true);
+      setTimeout(() => setCopiedSchool(false), 2500);
+    } catch {
+      setCopiedSchool(false);
     }
   };
 
@@ -232,6 +261,105 @@ export const fontMono = "'IBM Plex Mono', ui-monospace, monospace";
       >
         {copied ? "Copied ✓" : "Copy updated theme.js"}
       </button>
+
+      <div style={{ marginTop: 48, paddingTop: 32, borderTop: `1px solid ${COLORS.line}` }}>
+        <h2
+          style={{
+            fontFamily: fontDisplay,
+            fontStyle: "italic",
+            fontWeight: 600,
+            fontSize: 22,
+            color: COLORS.ink,
+            margin: "0 0 6px",
+          }}
+        >
+          Header text
+        </h2>
+        <p style={{ fontFamily: fontBody, fontSize: 14, lineHeight: 1.6, color: COLORS.inkSoft, margin: "0 0 20px" }}>
+          The short label shown next to the logo in the top nav. Copy the updated file and paste it into{" "}
+          <code style={{ fontFamily: fontMono, background: COLORS.line, padding: "1px 5px", borderRadius: 4 }}>
+            lib/schoolConfig.js
+          </code>
+          .
+        </p>
+
+        <label
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 6,
+            fontFamily: fontBody,
+            fontSize: 13,
+            fontWeight: 600,
+            color: COLORS.ink,
+            maxWidth: 200,
+            marginBottom: 20,
+          }}
+        >
+          Label
+          <input
+            type="text"
+            value={headerTag}
+            onChange={(e) => setHeaderTag(e.target.value)}
+            style={{
+              fontFamily: fontBody,
+              fontSize: 14,
+              padding: "8px 10px",
+              border: `1px solid ${COLORS.line}`,
+              borderRadius: 8,
+              outline: "none",
+            }}
+          />
+        </label>
+
+        <p style={{ fontFamily: fontMono, fontSize: 12, color: COLORS.inkSoft, margin: "0 0 8px" }}>
+          Preview
+        </p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            marginBottom: 24,
+            padding: 16,
+            background: COLORS.card,
+            border: `1px solid ${COLORS.line}`,
+            borderRadius: 10,
+          }}
+        >
+          <span
+            style={{
+              fontFamily: fontDisplay,
+              fontStyle: "italic",
+              fontWeight: 600,
+              fontSize: 18,
+              color: COLORS.ink,
+            }}
+          >
+            marquee
+          </span>
+          <span style={{ fontFamily: fontBody, fontSize: 14, fontWeight: 500, color: COLORS.inkSoft }}>
+            • {headerTag}
+          </span>
+        </div>
+
+        <button
+          onClick={handleCopySchool}
+          style={{
+            fontFamily: fontBody,
+            fontWeight: 600,
+            fontSize: 14,
+            background: COLORS.ink,
+            color: COLORS.bg,
+            border: "none",
+            borderRadius: 8,
+            padding: "10px 18px",
+            cursor: "pointer",
+          }}
+        >
+          {copiedSchool ? "Copied ✓" : "Copy updated schoolConfig.js"}
+        </button>
+      </div>
     </div>
   );
 }
