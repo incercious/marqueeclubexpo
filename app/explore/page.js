@@ -17,8 +17,7 @@ function ExploreContent() {
     let list = CLUBS.filter((c) => {
       const matchesQuery = (c.name + c.shortDescription).toLowerCase().includes(query.toLowerCase());
       const matchesCategory = activeCategory === "all" || c.category === activeCategory;
-      const matchesLevel =
-        levelFilter === "all" || c.level === "both" || c.level === levelFilter;
+      const matchesLevel = levelFilter === "all" || c.level === levelFilter;
       return matchesQuery && matchesCategory && matchesLevel;
     });
     if (sortBy === "name") list = [...list].sort((a, b) => a.name.localeCompare(b.name));
@@ -77,8 +76,8 @@ function ExploreContent() {
           }}
         >
           <option value="all">All grade levels</option>
-          <option value="ms">Middle school</option>
-          <option value="hs">High school</option>
+          <option value="ms">Middle School Only</option>
+          <option value="hs">High School Only</option>
         </select>
         <select
           value={sortBy}

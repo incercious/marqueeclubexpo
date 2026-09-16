@@ -400,6 +400,11 @@ export const CLUBS = [
     sponsor: "Mr. Javier Bru / Mr. Godia / Mr. Parra / Mr. Gallego",
     email: "jbru@dadeschools.net",
     social: { instagram: "https://instagram.com/ddcusrobotics" },
+    photos: [
+      "/images/clubs/robotics-club/team-1.jpg",
+      "/images/clubs/robotics-club/team-2.jpg",
+      "/images/clubs/robotics-club/team-3.jpg",
+    ],
     featured: true,
   },
   {
@@ -439,7 +444,7 @@ export const CLUBS = [
   },
   {
     slug: "title-wave-book-club",
-    level: "both", // confirmed via official 2026-2027 roster
+    level: "ms", // updated per direct confirmation -- differs from official roster, which listed "both"
     name: "Title Wave (Book Club)",
     category: "academic",
     shortDescription: "Discover new books and discuss them with fellow readers.",
@@ -535,6 +540,7 @@ export const CLUBS = [
     location: "Room 304",
     joinLink: "https://chat.whatsapp.com/IbIEXRwB79p384A3rsC8vi",
     social: { instagram: "https://www.instagram.com/makingpoliticsfunagain" },
+    photos: ["/images/clubs/politics-club/booth-1.jpg"],
     featured: false,
   },
   {

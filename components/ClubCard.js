@@ -32,7 +32,7 @@ export default function ClubCard({ club }) {
                 padding: "2px 9px",
               }}
             >
-              {club.level === "ms" ? "Middle school" : "High school"}
+              {club.level === "ms" ? "Middle School Only" : "High School Only"}
             </span>
           )}
         </div>

@@ -2,6 +2,7 @@ import { CLUBS, getClub, getCategory } from "@/data/clubs";
 import { COLORS, fontDisplay, fontBody, fontMono } from "@/lib/theme";
 import CategoryBadge from "@/components/CategoryBadge";
 import VideoPlaceholder from "@/components/VideoPlaceholder";
+import PhotoScroller from "@/components/PhotoScroller";
 import TicketButton from "@/components/TicketButton";
 import ClubCard from "@/components/ClubCard";
 import Link from "next/link";
@@ -66,6 +67,22 @@ export default function ClubPage({ params }) {
       </h1>
 
       <VideoPlaceholder videoUrl={club.videoUrl} />
+
+      <div style={{ marginTop: 20 }}>
+        <p
+          style={{
+            fontFamily: fontMono,
+            fontSize: 11.5,
+            color: COLORS.inkSoft,
+            textTransform: "uppercase",
+            letterSpacing: 0.4,
+            margin: "0 0 8px",
+          }}
+        >
+          Photos
+        </p>
+        <PhotoScroller photos={club.photos} />
+      </div>
 
       <p style={{ fontFamily: fontBody, fontSize: 16, lineHeight: 1.7, color: COLORS.ink, margin: "26px 0" }}>
         {club.longDescription}
