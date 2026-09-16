@@ -24,7 +24,7 @@ export const CATEGORIES = [
 export const CLUBS = [
   {
     slug: "2tor-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "2Tor Club",
     category: "academic",
     shortDescription: "Peer tutoring club where students who understand a subject teach students who don't.",
@@ -40,7 +40,7 @@ export const CLUBS = [
   },
   {
     slug: "art-business-dolphin-exclusives",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Art Business – Dolphin Exclusives",
     category: "business",
     shortDescription: "Bridges art and entrepreneurship, teaching students to market and sell their own artwork.",
@@ -48,14 +48,14 @@ export const CLUBS = [
     meetingDays: "Flexible",
     meetingTime: "See Ms. Silver",
     joinLink: "https://docs.google.com/forms/d/e/1FAIpQLSfQ2A3SZong2_79Y9lE8i14AX-yKYduKxt0H2gqbO025r11UA/viewform",
-    sponsor: "Ms. Silver",
+    sponsor: "Ms. Silver / Mr. Palomino",
     email: "v.silver@dadeschools.net",
     social: { instagram: "https://instagram.com/ddcus_dolphinexclusives", website: "https://dolphinexclusives.square.site" },
     featured: false,
   },
   {
     slug: "athletics-training-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Athletics Training Club",
     category: "sports",
     shortDescription: "Hands-on introduction to sports medicine, injury prevention, and athletic performance.",
@@ -66,7 +66,7 @@ export const CLUBS = [
   },
   {
     slug: "builders-club",
-    level: "ms", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "ms", // confirmed via official 2026-2027 roster
     name: "Builders Club",
     category: "service",
     shortDescription: "Middle school leadership and community service club.",
@@ -77,7 +77,7 @@ export const CLUBS = [
   },
   {
     slug: "chess-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Chess Club",
     category: "academic",
     shortDescription: "Learn, practice, and compete in chess in a supportive, team-oriented environment.",
@@ -93,18 +93,18 @@ export const CLUBS = [
   },
   {
     slug: "coin-collecting-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Coin Collecting Club",
     category: "other",
     shortDescription: "For students curious about the history and hobby of coin collecting.",
     longDescription: "Coin Collecting Club brings together students interested in exploring the history behind coins — whether you've got an old jar of change or a serious collection, everyone's welcome. Founded by student Benjamin Moraes.",
-    sponsor: "Ms. Cardeal",
+    sponsor: "Ms. Villamizar",
     social: {},
     featured: false,
   },
   {
     slug: "college-advisory-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "College Advisory Club",
     category: "academic",
     shortDescription: "Guidance and mentorship for navigating the college application process.",
@@ -116,19 +116,19 @@ export const CLUBS = [
   },
   {
     slug: "deca",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "DECA",
     category: "business",
     shortDescription: "Prepares future leaders in marketing, finance, hospitality, and management.",
     longDescription: "DECA prepares emerging leaders and entrepreneurs in marketing, finance, hospitality, and management, offering personal and professional growth through competitions, workshops, and networking.",
-    sponsor: "Ms. Silver / Ms. Ahkras-Abraham",
+    sponsor: "Ms. Silver / Ms. Ahkras-Abraham / Mr. Robles",
     email: "v.silver@dadeschools.net",
     social: { instagram: "https://instagram.com/ddcusdeca" },
     featured: false,
   },
   {
     slug: "drama-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Drama Club",
     category: "arts",
     shortDescription: "Explore acting, directing, writing, and stagecraft through theater production.",
@@ -141,7 +141,7 @@ export const CLUBS = [
   },
   {
     slug: "dnd-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "D&D Club",
     category: "other",
     shortDescription: "Weekly Dungeons & Dragons sessions — no experience necessary.",
@@ -155,7 +155,7 @@ export const CLUBS = [
   },
   {
     slug: "fashion-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Fashion Club",
     category: "arts",
     shortDescription: "Explore fashion design, styling, and industry trends through creative projects.",
@@ -166,18 +166,18 @@ export const CLUBS = [
   },
   {
     slug: "fbla",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Future Business Leaders of America (FBLA)",
     category: "business",
     shortDescription: "Develops future business leaders through competitions and networking.",
     longDescription: "FBLA inspires and prepares students to become community-minded business leaders, developing leadership, communication, and business skills through academic competitions and professional networking.",
-    sponsor: "Lilybell Fernandez / Ms. Jadon",
+    sponsor: "Ms. Lilybell Fernandez / Ms. Jadon",
     social: { instagram: "https://instagram.com/ddcusfbla" },
     featured: false,
   },
   {
     slug: "fea",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Future Educators of America (FEA)",
     category: "academic",
     shortDescription: "For students interested in pursuing careers in education.",
@@ -189,7 +189,7 @@ export const CLUBS = [
   },
   {
     slug: "future-engineers-lego-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Future Engineers of America (Lego Club)",
     category: "stem",
     shortDescription: "Hands-on engineering exploration for students interested in engineering careers.",
@@ -200,7 +200,7 @@ export const CLUBS = [
   },
   {
     slug: "finance-literacy-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Finance Literacy Club",
     category: "business",
     shortDescription: "Learn budgeting, saving, investing, and personal finance skills.",
@@ -212,7 +212,7 @@ export const CLUBS = [
   },
   {
     slug: "hand-lettering-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Hand Lettering Club",
     category: "arts",
     shortDescription: "A relaxed space for lettering, embroidery, crochet, and other handmade crafts.",
@@ -223,7 +223,7 @@ export const CLUBS = [
   },
   {
     slug: "hosa",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "HOSA – Future Health Professionals",
     category: "stem",
     shortDescription: "For students exploring careers in healthcare through competitions and leadership.",
@@ -237,19 +237,19 @@ export const CLUBS = [
   },
   {
     slug: "hispanic-honor-society",
-    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Hispanic Honor Society (HHS)",
     category: "culture",
     shortDescription: "Honor society recognizing academic excellence in Spanish, Portuguese, and Hispanic culture.",
     longDescription: "Hispanic Honor Society promotes and recognizes high achievement in Spanish and Portuguese language and Hispanic cultures, fostering cultural exchange and opportunities for academic excellence, leadership, and service. Open to 10th–12th graders.",
-    sponsor: "Mr. Oscar Vergara / Ms. Dulce Moreno / Mr. Carlos Baruki",
+    sponsor: "Mr. Oscar Vergara / Mr. Carlos Baruki / Ms. Dulce Moreno / Ms. C. Moreno / Ms. Botero",
     email: "ogvergara@dadeschools.net",
     social: {},
     featured: false,
   },
   {
     slug: "ib-honor-society",
-    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "International Baccalaureate Honor Society (IBHS)",
     category: "academic",
     shortDescription: "Recognizes academic excellence among IB Diploma students.",
@@ -260,7 +260,7 @@ export const CLUBS = [
   },
   {
     slug: "key-club",
-    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Key Club",
     category: "service",
     shortDescription: "Student-led community service and leadership club for high schoolers.",
@@ -284,7 +284,7 @@ export const CLUBS = [
   },
   {
     slug: "mu-alpha-theta",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Mu Alpha Theta Honor Society",
     category: "stem",
     shortDescription: "Math honor society for students who want to sharpen their skills and compete.",
@@ -298,7 +298,7 @@ export const CLUBS = [
   },
   {
     slug: "national-english-honor-society",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "National English Honor Society (NEHS)",
     category: "academic",
     shortDescription: "Honor society recognizing excellence in English and language arts.",
@@ -313,20 +313,31 @@ export const CLUBS = [
     featured: false,
   },
   {
-    slug: "nhs-njhs",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
-    name: "National Honor Society (NHS) & National Junior Honor Society (NJHS)",
+    slug: "national-honor-society",
+    level: "hs", // confirmed via official 2026-2027 roster
+    name: "National Honor Society (NHS)",
     category: "academic",
-    shortDescription: "Recognizes and promotes academic excellence for middle and high schoolers.",
-    longDescription: "NHS (10th–12th grade) and NJHS (6th–9th grade) recognize students' academic excellence and give them the chance to participate in leadership-based events.",
-    sponsor: "Ms. Priscila Vega / Ms. Cabello / Ms. Gillespie",
+    shortDescription: "Recognizes and promotes academic excellence among high schoolers.",
+    longDescription: "National Honor Society recognizes high school students' academic excellence and gives them the chance to participate in leadership-based events. Open to 10th–12th grade.",
+    sponsor: "Ms. Priscila Vega",
     email: "priscillavega@dadeschools.net",
     social: { instagram: "https://instagram.com/the_nationalddcus" },
     featured: true,
   },
   {
+    slug: "national-junior-honor-society",
+    level: "both", // confirmed via official 2026-2027 roster
+    name: "National Junior Honor Society (NJHS)",
+    category: "academic",
+    shortDescription: "Recognizes and promotes academic excellence among middle and junior high schoolers.",
+    longDescription: "National Junior Honor Society recognizes younger students' academic excellence and gives them the chance to participate in leadership-based events. Open to 6th–9th grade.",
+    sponsor: "Ms. Gillespie / Ms. Cabello",
+    social: { instagram: "https://instagram.com/the_nationalddcus" },
+    featured: false,
+  },
+  {
     slug: "national-science-honor-society",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "National Science Honor Society (NSHS)",
     category: "stem",
     shortDescription: "Honor society recognizing excellence and achievement in the sciences.",
@@ -340,7 +351,7 @@ export const CLUBS = [
   },
   {
     slug: "its-the-echo-news-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "It's the Echo (News Club)",
     category: "other",
     shortDescription: "Student-run news team producing school video reports and journalism.",
@@ -355,7 +366,7 @@ export const CLUBS = [
   },
   {
     slug: "portuguese-language-exchange",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Portuguese Language Exchange",
     category: "culture",
     shortDescription: "Explore Portuguese language and culture through events and practice.",
@@ -366,7 +377,7 @@ export const CLUBS = [
   },
   {
     slug: "production-club-stage-and-design",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Production Club (Stage and Design)",
     category: "arts",
     shortDescription: "Design and build stage sets and technical production elements for school events.",
@@ -378,7 +389,7 @@ export const CLUBS = [
   },
   {
     slug: "robotics-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Robotics Club (RoboFins)",
     category: "stem",
     shortDescription: "Award-winning VEX robotics team — design, build, code, and compete.",
@@ -393,18 +404,18 @@ export const CLUBS = [
   },
   {
     slug: "sociedad-hispanica-de-amistad",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "ms", // confirmed via official 2026-2027 roster
     name: "Sociedad Hispánica de Amistad (SHA)",
     category: "culture",
     shortDescription: "Explore Hispanic culture and practice Spanish in a fun, engaging setting.",
     longDescription: "Sociedad Hispánica de Amistad encourages students to develop a deeper understanding of and respect for Hispanic cultures and traditions, while enhancing Spanish language skills in a fun, practical context. Open to 6th–9th graders.",
-    sponsor: "Mr. Salvador / Ms. Rivera / Ms. Cardeal / Ms. Carmen Moreno",
+    sponsor: "Mr. Salvador / Ms. Cardeal / Ms. Rivera De Elena / Ms. Carmen Moreno / Ms. Botero",
     social: {},
     featured: false,
   },
   {
     slug: "student-ambassadors",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Student Ambassadors",
     category: "leadership",
     shortDescription: "Represents the school at events and builds student leadership skills.",
@@ -416,7 +427,7 @@ export const CLUBS = [
   },
   {
     slug: "student-government-association",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Student Government Association (SGA)",
     category: "leadership",
     shortDescription: "Represents the student body's voice to school faculty and leadership.",
@@ -428,7 +439,7 @@ export const CLUBS = [
   },
   {
     slug: "title-wave-book-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Title Wave (Book Club)",
     category: "academic",
     shortDescription: "Discover new books and discuss them with fellow readers.",
@@ -439,7 +450,7 @@ export const CLUBS = [
   },
   {
     slug: "tri-m-honor-society",
-    level: "hs", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Tri-M Music Honor Society",
     category: "arts",
     shortDescription: "Honor society recognizing excellence in music for high schoolers.",
@@ -450,7 +461,7 @@ export const CLUBS = [
   },
   {
     slug: "visual-arts-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Visual Arts Club",
     category: "arts",
     shortDescription: "Explore different art forms and techniques in a creative, expressive space.",
@@ -472,7 +483,7 @@ export const CLUBS = [
   },
   {
     slug: "wellness-yoga-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Wellness Club / Yoga Club",
     category: "other",
     shortDescription: "Mindfulness, breathing, and relaxation practices for stress relief.",
@@ -486,7 +497,7 @@ export const CLUBS = [
   },
   {
     slug: "young-scientist",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Young Scientist",
     category: "stem",
     shortDescription: "For students curious about science, exploration, and discovery.",
@@ -499,7 +510,7 @@ export const CLUBS = [
   },
   {
     slug: "muay-thai",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "both", // confirmed via official 2026-2027 roster
     name: "Muay Thai",
     category: "sports",
     shortDescription: "Learn the fundamentals of Muay Thai in a beginner-friendly setting.",
@@ -514,7 +525,7 @@ export const CLUBS = [
   },
   {
     slug: "politics-club",
-    level: "both", // "ms", "hs", or "both" -- confirm with sponsors as you go
+    level: "hs", // confirmed via official 2026-2027 roster
     name: "Politics Club",
     category: "leadership",
     shortDescription: "A student-led space to discuss the political state of the country and beyond.",
@@ -524,6 +535,50 @@ export const CLUBS = [
     location: "Room 304",
     joinLink: "https://chat.whatsapp.com/IbIEXRwB79p384A3rsC8vi",
     social: { instagram: "https://www.instagram.com/makingpoliticsfunagain" },
+    featured: false,
+  },
+  {
+    slug: "arts-club",
+    level: "both", // confirmed via official 2026-2027 roster
+    name: "Arts Club",
+    category: "arts",
+    shortDescription: "A creative space to explore art projects and techniques together.",
+    longDescription: "Arts Club gives students a space to create, experiment, and grow their artistic skills together outside of the traditional classroom setting.",
+    sponsor: "Ms. M. Moreno / Mr. Martin",
+    social: {},
+    featured: false,
+  },
+  {
+    slug: "band-and-rock-band",
+    level: "both", // confirmed via official 2026-2027 roster
+    name: "Band and Rock Band",
+    category: "arts",
+    shortDescription: "For student musicians who want to play together, from concert band to rock band.",
+    longDescription: "Band and Rock Band gives student musicians the chance to rehearse and perform together, building musicianship and stage experience across different band styles.",
+    sponsor: "Mr. Araujo",
+    social: {},
+    featured: false,
+  },
+  {
+    slug: "campus-creators-club",
+    level: "both", // confirmed via official 2026-2027 roster
+    name: "Campus Creators Club",
+    category: "arts",
+    shortDescription: "For students interested in content creation, media, and digital storytelling.",
+    longDescription: "Campus Creators Club is a space for students interested in content creation and digital media, developing skills in areas like video, photography, and storytelling.",
+    sponsor: "Mr. Knight",
+    social: {},
+    featured: false,
+  },
+  {
+    slug: "law-club",
+    level: "hs", // confirmed via official 2026-2027 roster
+    name: "Law Club",
+    category: "academic",
+    shortDescription: "For students interested in law, legal careers, and courtroom-style activities.",
+    longDescription: "Law Club introduces high school students to the legal field, exploring legal concepts, careers in law, and skills like argumentation and critical thinking.",
+    sponsor: "Mr. Davila / Ms. Diez",
+    social: {},
     featured: false,
   },
 ];
