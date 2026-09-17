@@ -114,7 +114,20 @@ export default function ClubPage({ params }) {
       </div>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center" }}>
-        {club.joinLink ? (
+        {club.joinLinkNew || club.joinLinkReturning ? (
+          <>
+            {club.joinLinkNew && (
+              <TicketButton primary href={club.joinLinkNew} external>
+                New member? Join here
+              </TicketButton>
+            )}
+            {club.joinLinkReturning && (
+              <TicketButton primary href={club.joinLinkReturning} external>
+                Returning member? Sign up here
+              </TicketButton>
+            )}
+          </>
+        ) : club.joinLink ? (
           <TicketButton primary href={club.joinLink} external>
             Join club
           </TicketButton>

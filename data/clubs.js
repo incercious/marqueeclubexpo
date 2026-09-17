@@ -89,7 +89,7 @@ export const CLUBS = [
     sponsor: "Mr. Hurtado / Mr. Gonzalez",
     email: "e.hurtado@dadeschools.net",
     social: { instagram: "https://instagram.com/ddcuschessclub" },
-    featured: false,
+    featured: true,
   },
   {
     slug: "coin-collecting-club",
@@ -233,7 +233,7 @@ export const CLUBS = [
     sponsor: "Ms. Tortosa",
     email: "atortosa@dadeschools.net",
     social: { instagram: "https://instagram.com/ddcus.hosa" },
-    featured: true,
+    featured: false,
   },
   {
     slug: "hispanic-honor-society",
@@ -265,9 +265,18 @@ export const CLUBS = [
     category: "service",
     shortDescription: "Student-led community service and leadership club for high schoolers.",
     longDescription: "Key Club develops leadership skills and encourages community service among high school students, inspiring members to take initiative, build character, and make a positive impact through volunteerism.",
+    meetingDays: "Monthly",
+    meetingTime: "2:15 PM",
+    location: "Open Space, 2nd Floor",
+    joinLinkNew: "https://docs.google.com/forms/d/e/1FAIpQLSehV3gcZe7nJTv29pNmgmFpCmPY4cPJMBxDoBCYkDNPFPYPog/viewform?usp=publish-editor",
+    joinLinkReturning: "https://docs.google.com/forms/d/e/1FAIpQLSeMPKNewd7r4naVKdHODEBGlwJQpt9l1OBbp0s6DcUuuAxb_Q/viewform?usp=publish-editor",
     sponsor: "Ms. Heliana Vasquez",
     email: "hvasquez@dadeschools.net",
     social: { instagram: "https://instagram.com/ddcuskeyclub" },
+    photos: [
+      "/images/clubs/key-club/event-1.jpg",
+      "/images/clubs/key-club/event-2.jpg",
+    ],
     featured: true,
   },
   {
@@ -310,7 +319,7 @@ export const CLUBS = [
     sponsor: "Ms. Jaynie Hernandez / Mr. Terga",
     email: "hernandez.j@dadeschools.net",
     social: {},
-    featured: false,
+    featured: true,
   },
   {
     slug: "national-honor-society",
@@ -322,7 +331,7 @@ export const CLUBS = [
     sponsor: "Ms. Priscila Vega",
     email: "priscillavega@dadeschools.net",
     social: { instagram: "https://instagram.com/the_nationalddcus" },
-    featured: true,
+    featured: false,
   },
   {
     slug: "national-junior-honor-society",
@@ -526,7 +535,7 @@ export const CLUBS = [
     email: "e.hurtado@dadeschools.net",
     joinLink: "https://docs.google.com/forms/d/e/1FAIpQLSekfuAnGRWSwWFJuswNxFCKRvO9O1tulgOw3GlQCUg9Pt_7XQ/viewform?usp=send_form",
     social: { instagram: "https://instagram.com/muaythaiddcus" },
-    featured: false,
+    featured: true,
   },
   {
     slug: "politics-club",
