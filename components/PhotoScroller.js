@@ -38,7 +38,6 @@ function ArrowButton({ onClick, side, ariaLabel, children }) {
         alignItems: "center",
         justifyContent: "center",
         cursor: "pointer",
-        overflow: "hidden",
       }}
     >
       {children}
@@ -84,7 +83,7 @@ export default function PhotoScroller({ photos = [] }) {
 
   return (
     <div>
-      <div style={{ position: "relative", borderRadius: 10, overflow: "hidden" }}>
+      <div style={{ position: "relative" }}>
         <img
           src={photos[index]}
           alt={`Photo ${index + 1} of ${photos.length}`}
@@ -93,6 +92,7 @@ export default function PhotoScroller({ photos = [] }) {
             aspectRatio: "16 / 9",
             objectFit: "cover",
             display: "block",
+            borderRadius: 10,
           }}
         />
         {photos.length > 1 && (
