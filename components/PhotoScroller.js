@@ -16,7 +16,7 @@ function ArrowButton({ onClick, side, ariaLabel, children }) {
     onClick();
     setTimeout(() => {
       setPulses((p) => p.filter((pid) => pid !== id));
-    }, 500);
+    }, 650);
   };
 
   return (
