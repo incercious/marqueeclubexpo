@@ -4,6 +4,51 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 import { COLORS, fontMono } from "@/lib/theme";
 
+// One arrow button, with a small shadow-pulse effect that plays each time
+// it's clicked (grows outward and fades away) -- purely a visual touch,
+// doesn't affect the actual navigation logic.
+function ArrowButton({ onClick, side, ariaLabel, children }) {
+  const [pulses, setPulses] = useState([]);
+
+  const handleClick = () => {
+    const id = Date.now() + Math.random();
+    setPulses((p) => [...p, id]);
+    onClick();
+    setTimeout(() => {
+      setPulses((p) => p.filter((pid) => pid !== id));
+    }, 500);
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      aria-label={ariaLabel}
+      style={{
+        position: "absolute",
+        [side]: 10,
+        top: "50%",
+        transform: "translateY(-50%)",
+        width: 34,
+        height: 34,
+        borderRadius: "50%",
+        border: "none",
+        background: "rgba(28, 38, 36, 0.55)",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        overflow: "hidden",
+      }}
+    >
+      {children}
+      {pulses.map((id) => (
+        <span key={id} className="click-pulse" />
+      ))}
+    </button>
+  );
+}
+
 // A simple photo carousel: one photo at a time, arrows to move between
 // them, dots to show position. Pass an array of image paths (usually
 // files sitting in /public/images/clubs/<slug>/) -- if a club has no
@@ -52,50 +97,12 @@ export default function PhotoScroller({ photos = [] }) {
         />
         {photos.length > 1 && (
           <>
-            <button
-              onClick={prev}
-              aria-label="Previous photo"
-              style={{
-                position: "absolute",
-                left: 10,
-                top: "50%",
-                transform: "translateY(-50%)",
-                width: 34,
-                height: 34,
-                borderRadius: "50%",
-                border: "none",
-                background: "rgba(28, 38, 36, 0.55)",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-              }}
-            >
+            <ArrowButton onClick={prev} side="left" ariaLabel="Previous photo">
               <ChevronLeft size={18} />
-            </button>
-            <button
-              onClick={next}
-              aria-label="Next photo"
-              style={{
-                position: "absolute",
-                right: 10,
-                top: "50%",
-                transform: "translateY(-50%)",
-                width: 34,
-                height: 34,
-                borderRadius: "50%",
-                border: "none",
-                background: "rgba(28, 38, 36, 0.55)",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-              }}
-            >
+            </ArrowButton>
+            <ArrowButton onClick={next} side="right" ariaLabel="Next photo">
               <ChevronRight size={18} />
-            </button>
+            </ArrowButton>
           </>
         )}
       </div>
@@ -123,3 +130,4 @@ export default function PhotoScroller({ photos = [] }) {
     </div>
   );
 }
+
